@@ -7,6 +7,7 @@ const cors = require('cors');
 var indexRouter = require('./routes/index');
 var featuresRouter = require('./routes/features');
 var languagesRouter = require('./routes/languages');
+var spokenLanguagesRouter = require('./routes/spokenLanguages');
 
 var app = express();
 var helmet = require('helmet');
@@ -24,5 +25,6 @@ app.use(cors({
 app.use('/', indexRouter);
 app.use('/features', featuresRouter);
 app.use('/languages', languagesRouter);
+app.use('/spokenlanguages', spokenLanguagesRouter)
 
 module.exports = app;
